@@ -1,0 +1,6 @@
+install sshd on guest
+check virtualbbox->network->NAT:
+    check port forward: 22 2222
+check host ip
+set putty ip to host ip
+set putty port to 22
