@@ -1,3 +1,4 @@
 #!/bin/sh
-apt-get update
-apt-get upgrade
+apt-get update -y
+apt-get upgrade -y
+
