@@ -1,0 +1,17 @@
+rails new valami --database-postgresql
+cd valami
+echo "gem 'pg'" >> Gemfile
+bundle install
+
+add poassword for postgres user: 
+    sudo -u postgres psql
+    \password
+
+update config/database.yml:
+    host: localhost
+    port: 5432
+    username: postgres
+    password: postgres
+
+update pg_hba.conf:
+    local	all	all	md5
