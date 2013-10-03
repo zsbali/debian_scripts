@@ -1,5 +1,14 @@
 #!/bin/sh
 
+
+
+printf "sshd\t\t"
+    if [ `which sshd` ]; then
+	which sshd
+    else
+	echo ""
+    fi
+
 printf "curl\t\t"
     if [ `which curl` ]; then
 	which curl
@@ -25,7 +34,7 @@ printf "rake\t\t"
     if [ `which rake` ]; then
 	which rake
     else
-	ehco ""
+	echo ""
     fi
 
 printf "psql\t\t"
