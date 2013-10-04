@@ -1,5 +1,12 @@
 #!/bin/sh
 
+printf "sudo\t\t"
+    if [ `which sudo` ]; then
+	which sudo
+    else
+	echo ""
+    fi
+
 printf "sshd\t\t"
     if [ `which sshd` ]; then
 	which sshd
