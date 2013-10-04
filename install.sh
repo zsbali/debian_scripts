@@ -1,8 +1,8 @@
-if [ "" = ruby ]; then
+if [ "$1" = ruby ]; then
     echo "installing ruby..."
 fi
 
-if [ "" = rails]; then
+if [ "$1" = rails ]; then
     echo "installing rails..."
 fi
 
