@@ -30,14 +30,18 @@ printf "mc\t\t"
 
 printf "ruby\t\t"
     if [ `which ruby` ]; then
-	ruby -v
+	printf "%s\t" `which ruby`
+	printf "%s " `ruby -v`
+	printf "\n"
     else
 	echo ""
     fi
 
 printf "rails\t\t"
     if [ `which rails` ]; then
-	rails -v
+	printf "%s\t" `which rails`
+	printf "%s " `rails -v`
+	printf "\n"
     else
 	echo ""
     fi
@@ -51,35 +55,44 @@ printf "rake\t\t"
 
 printf "psql\t\t"
     if [ `which psql` ]; then
-	psql --version | grep psql
+	printf "%s\t" `which psql`
+	printf "%s " `psql --version | grep psql`
+	printf "\n"
     else
 	echo ""
     fi
 
 printf "git\t\t"
     if [ `which git` ]; then
-	git version
+	printf "%s\t" `which git`
+	printf "%s " `git version`
+	printf "\n"
     else
 	echo ""
     fi
 
 printf "heroku\t\t"
     if [ `which heroku` ]; then
-	heroku --version
+	printf "%s\t" `which heroku`
+	printf "%s " `heroku --version`
+	printf "\n"
     else
 	echo ""
     fi
 
 printf "nodejs\t\t"
     if [ `which nodejs` ]; then
-	nodejs --version
+	printf "%s\t" `which nodejs`
+	printf "%s " `nodejs --version`
+	printf "\n"
     else
 	echo ""
     fi
 
 printf "gem\t\t"
     if [ `which gem` ]; then
-	gem --version
+	printf "%s\t" `which gem`
+	printf "\n"	
     else
 	echo ""
     fi
