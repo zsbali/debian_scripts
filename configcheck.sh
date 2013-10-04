@@ -1,7 +1,5 @@
 #!/bin/sh
 
-
-
 printf "sshd\t\t"
     if [ `which sshd` ]; then
 	which sshd
@@ -12,6 +10,13 @@ printf "sshd\t\t"
 printf "curl\t\t"
     if [ `which curl` ]; then
 	which curl
+    else
+	echo ""
+    fi
+
+printf "mc\t\t"
+    if [ `which mc` ]; then
+	which mc
     else
 	echo ""
     fi
