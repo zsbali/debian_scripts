@@ -1,2 +1,2 @@
 #!/bin/sh
-apt-get install passenger -y
+gem install passenger
