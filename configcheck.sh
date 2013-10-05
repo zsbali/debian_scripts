@@ -100,7 +100,16 @@ printf "gem\t\t"
 printf "nginx\t\t"
     if [ `which nginx` ]; then
 	printf "%s\t" `which nginx`
-	printf "%s " `nginx -v`
+	printf "%s" `nginx -v`
+    else
+	echo ""
+    fi
+
+printf "passenger\t"
+    if [ `which passenger` ]; then
+	printf "%s" `which passenger`
+	printf " "
+	printf "%s " `passenger -v | grep version`
 	printf "\n"	
     else
 	echo ""

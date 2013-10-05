@@ -7,6 +7,7 @@ apt-get install ssh -y
 ./install_ruby.sh
 ./install_rails.sh
 ./install_rake.sh
+./install_psql.sh
 ./install_nodejs.sh
 ./install_heroku_toolbelt2.sh
 ./install_nginx.sh
