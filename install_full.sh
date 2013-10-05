@@ -1,9 +1,12 @@
 #!/bin/sh
-apt-get install sudo -y
-curl https://raw.github.com/zsbali/linux_scripts/master/update_debian.sh | sh
-curl https://raw.github.com/zsbali/linux_scripts/master/install_ruby.sh | sh
-curl https://raw.github.com/zsbali/linux_scripts/master/install_rails.sh | sh
-curl https://raw.github.com/zsbali/linux_scripts/master/install_rake.sh | sh
-curl https://raw.github.com/zsbali/linux_scripts/master/install_pgsql.sh | sh
-curl https://raw.github.com/zsbali/linux_scripts/master/install_nodejs.sh | sh
+apt-get install mc -y
+apt-get install ssh -y
+./install_sudo.sh
+./install_curl.sh
+./update_debian.sh
+./install_ruby.sh
+./install_rails.sh
+./install_rake.sh
+./install_nodejs.sh
+./install_heroku.sh
 
