@@ -97,5 +97,14 @@ printf "gem\t\t"
 	echo ""
     fi
 
+printf "nginx\t\t"
+    if [ `which nginx` ]; then
+	printf "%s\t" `which nginx`
+	printf "%s " `nginx -v`
+	printf "\n"	
+    else
+	echo ""
+    fi
+
 echo ""
 
