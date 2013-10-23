@@ -6,10 +6,10 @@ cd valami
 add password for postgres user: 
     sudo -u postgres psql
     \password
+    \du
 
 update config/database.yml:
     host: localhost
-    port: 5432
     username: postgres
     password: postgres
 
@@ -17,3 +17,9 @@ update pg_hba.conf:
     local	all	postgres	md5
 
 rake db:create
+
+create a user for postgresql:
+    sudo -u postgres createuser --createdb --pwprompt railsapp1
+
+with no password:BBBBBB
+    sudo -u postgres createuser --createdb railsapp2
