@@ -6,6 +6,7 @@ else
 fi
 cat > /etc/apt/apt.conf.d/01proxy << EOF
 Acquire::http::Proxy "$IP:3142";
+Acquire::ftp::Proxy "$IP:3142";
 EOF
 wget -O- "http://$IP:3142"
 
