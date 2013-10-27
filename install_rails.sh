@@ -1,2 +1,3 @@
 #!/bin/sh
-gem install rails --include-dependencies
+gem install rails
+
