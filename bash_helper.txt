@@ -1,0 +1,7 @@
+# usage: source ./bash_helpre.txt
+#
+alias "cc=~/debian_scripts/checkinstall.sh"
+alias "gs=git status"
+alias "ga=git add"
+alias "gpom=git push origin master"
+alias "gc=git commit"
