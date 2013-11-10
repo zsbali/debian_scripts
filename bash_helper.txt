@@ -65,6 +65,10 @@ cd_func ()
 alias cd=cd_func
 
 if [[ $BASH_VERSION > "2.05a" ]]; then
-  # ctrl+e shows the menu
-  bind -x "\"\C-e\":cd_func -- ;"
+  # ctrl+w shows the menu
+  bind -x "\"\C-w\":cd_func -- ;"
 fi
+
+export PS1="[\u@`hostname -I` \W]$ "
+
+
