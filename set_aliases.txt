@@ -1,2 +1,0 @@
-alias "cc=./configcheck.sh"
-alias "install=./install.sh"
