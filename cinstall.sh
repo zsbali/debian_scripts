@@ -21,7 +21,7 @@ function print3 {
 	fi
 }
 print3 "sudo"		"sudo -V | grep 'Sudo version'" 
-print3 "sshd" 		"ssh -v 2>&1 | grep 'SSH'"
+print3 "sshd" 		"ssh -V 2>&1 | grep 'SSH'"
 print3 "curl" 		"curl --version | grep curl"
 print3 "mc" 		"mc --version | grep Midnight"
 print3 "ruby" 		"ruby --version"
