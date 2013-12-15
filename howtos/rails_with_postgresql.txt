@@ -1,4 +1,4 @@
-rails new valami --database-postgresql
+rails new valami --database=postgresql
 cd valami
 #echo "gem 'pg'" >> Gemfile
 #bundle install
