@@ -1,8 +1,10 @@
 rails new valami --database=postgresql
 cd valami
-#echo "gem 'pg'" >> Gemfile
-#bundle install
+echo "gem 'pg'" >> Gemfile
+bundle install
 
+
+#DO NOT add password for postgres user, but if you want, you can:
 add password for postgres user: 
     sudo -u postgres psql
     \password
@@ -11,10 +13,11 @@ add password for postgres user:
 update config/database.yml:
     host: localhost
     username: postgres
-    password: postgres
+    password: 
 
-update pg_hba.conf:
-    local	all	postgres	md5
+#check pg_hba.conf:
+#by default, you don't have to add anything because "postgres" user can do anything
+#    local	all	postgres	peer
 
 rake db:create
 
