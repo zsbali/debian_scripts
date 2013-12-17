@@ -6,4 +6,4 @@ apt-get upgrade
 ./install_ruby.sh
 source /usr/local/rvm/scripts/rvm
 ./install_rails.sh
-./checkinstall.sh
+
