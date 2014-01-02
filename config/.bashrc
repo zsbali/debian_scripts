@@ -28,6 +28,9 @@ alias "ga=git add"
 alias "gpom=git push origin master"
 alias "gc=git commit"
 
+bind -r '\C-s'
+stty -ixon
+
 # do ". acd_func.sh"
 # acd_func 1.0.5, 10-nov-2004
 # petar marinov, http:/geocities.com/h2428, this is public domain
