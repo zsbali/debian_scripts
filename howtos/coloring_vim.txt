@@ -1,0 +1,11 @@
+1st: set putty config:
+http://blog.sanctum.geek.nz/putty-configuration/
+
+2nd: apply color conversion script:
+http://www.vim.org/scripts/script.php?script_id=1809
+
+3rd: choose & download a color scheme you want:
+http://www.vimninjas.com/2012/08/26/10-vim-color-schemes-you-need-to-own/
+
+4th: add a line to .vimrc to load the preferred scheme on start:
+colorscheme grb256
