@@ -1,4 +1,6 @@
 1st: set putty config:
+Connection -> Data -> Terminal-type string: putty-256color
+Then you can check it with colortest.
 http://blog.sanctum.geek.nz/putty-configuration/
 
 2nd: apply color conversion script:
