@@ -1,6 +1,6 @@
 #!/bin/sh
 apt-get install build-essential module-assistant -y
 m-a prepare
-mount /media/cdrom
+mount /dev/sr0 /media/cdrom
 sh /media/cdrom/VBoxLinuxAdditions.run
 
