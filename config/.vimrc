@@ -13,3 +13,7 @@ colorscheme codeschool
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
 :imap <c-s> <Esc><c-s>
+
+behave mswin
+
+set guifont=\Courier\ 10\ Pitch\ 13
