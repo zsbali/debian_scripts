@@ -1,6 +1,6 @@
 #!/bin/bash
-apt-get update
-apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
 ./install_sudo.sh
 ./install_curl.sh
 ./install_ruby.sh
