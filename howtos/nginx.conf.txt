@@ -37,7 +37,7 @@ http {
 			#alias /var/rails/valami2/public$1;
 			passenger_app_root /var/rails/valami2;
 			passenger_enabled on;			
-		
+			rails_env development;
 		}
 
     }
