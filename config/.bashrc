@@ -95,3 +95,5 @@ if [[ $BASH_VERSION > "2.05a" ]]; then
 fi
 
 export PS1="[\u@`hostname -I` \W]$ "
+
+alias cinstall=~/debian_scripts/cinstall.sh
