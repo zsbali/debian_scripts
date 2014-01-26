@@ -23,15 +23,26 @@ else
     fi
 
     if [ ! -d /opt/java-oracle ]; then
-	sudo mkdir /opt/java-oracle || exit 0
+	sudo mkdir /opt/java-oracle
     fi
-    sudo tar -zxf /tmp/jdk-7-linux-x64.tar.gz -C /opt/java-oracle
+    sudo tar -zxf /tmp/jdk-7-linux-x64.tar.gz -C /opt/java-oracle || exit 0
 fi
 
 JHome=/opt/java-oracle/jdk1.7.0_51
-sudo update-alternatives --install /usr/bin/java java ${JHome%*/}/bin/java 20000 || exit 0
-sudo update-alternatives --install /usr/bin/javac javac ${JHome%*/}/bin/javac 20000 || exit 0
-sudo update-alternatives --config java || exit 0
-sudo mkdir /opt/google/chrome/plugins || exit 0
-sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/amd64/libnpjp2.so /opt/google/chrome/plugins/ || exit 0
-sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/amd64/libnpjp2.so /usr/lib/firefox-addons/plugins/libnpjp2.so || exit 0
+sudo update-alternatives --install /usr/bin/java java ${JHome%*/}/bin/java 20000
+sudo update-alternatives --install /usr/bin/javac javac ${JHome%*/}/bin/javac 20000
+sudo update-alternatives --config java
+if [ ! -d /opt/google/chrome/plugins ]; then
+    sudo mkdir /opt/google/chrome/plugins || exit 0
+fi
+
+if [ $platf = 64 ]; then
+    sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/amd64/libnpjp2.so /opt/google/chrome/plugins/
+    sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/amd64/libnpjp2.so /usr/lib/firefox-addons/plugins/libnpjp2.so
+fi
+
+if [ $platf = 32 ]; then
+    sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/i386/libnpjp2.so /opt/google/chrome/plugins/
+    sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/i386/libnpjp2.so /usr/lib/firefox-addons/plugins/libnpjp2.so
+fi
+
