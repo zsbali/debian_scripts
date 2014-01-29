@@ -32,17 +32,16 @@ JHome=/opt/java-oracle/jdk1.7.0_51
 sudo update-alternatives --install /usr/bin/java java ${JHome%*/}/bin/java 20000
 sudo update-alternatives --install /usr/bin/javac javac ${JHome%*/}/bin/javac 20000
 sudo update-alternatives --config java
-if [ ! -d /opt/google/chrome/plugins ]; then
-    sudo mkdir /opt/google/chrome/plugins || exit 0
-fi
+#if [ ! -d /opt/google/chrome/plugins ]; then
+#    sudo mkdir /opt/google/chrome/plugins || exit 0
+#    if [ $platf = 64 ]; then
+#	sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/amd64/libnpjp2.so /opt/google/chrome/plugins/
+#        sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/amd64/libnpjp2.so /usr/lib/firefox-addons/plugins/libnpjp2.so
+#    fi
+#fi
 
-if [ $platf = 64 ]; then
-    sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/amd64/libnpjp2.so /opt/google/chrome/plugins/
-    sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/amd64/libnpjp2.so /usr/lib/firefox-addons/plugins/libnpjp2.so
-fi
-
-if [ $platf = 32 ]; then
-    sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/i386/libnpjp2.so /opt/google/chrome/plugins/
-    sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/i386/libnpjp2.so /usr/lib/firefox-addons/plugins/libnpjp2.so
-fi
+#if [ $platf = 32 ]; then
+#    sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/i386/libnpjp2.so /opt/google/chrome/plugins/
+#    sudo ln -sf /opt/java-oracle/jdk1.7.0_51/jre/lib/i386/libnpjp2.so /usr/lib/firefox-addons/plugins/libnpjp2.so
+#fi
 
