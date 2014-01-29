@@ -1,4 +1,4 @@
-syntax on
+BBBBBBsyntax on
 nmap <buffer> <F5> <Plug>(xmpfilter-run)
 xmap <buffer> <F5> <Plug>(xmpfilter-run)
 imap <buffer> <F5> <Plug>(xmpfilter-run)
@@ -17,3 +17,6 @@ colorscheme codeschool
 behave mswin
 
 set guifont=\Courier\ 10\ Pitch\ 13
+
+nmap <F9> :.w !bash &>/dev/pts/2 <CR><CR>
+
