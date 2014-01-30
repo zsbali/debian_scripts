@@ -1,14 +1,13 @@
-rails new valami --database=postgresql
-cd valami
+new_app=valami
+rails new $new_app --database=postgresql
+cd $new_app
 echo "gem 'pg'" >> Gemfile
 bundle install
 
-
 #create a railsadmin user: 
     sudo -u postgres createuser --createdb --pwprompt railsadmin
-#with no password:
+#create a railsadmin user with no password: 
     sudo -u postgres createuser --createdb railsadmin
-
 
 #DO NOT add password for postgres user
 #but later if you want:
@@ -16,15 +15,14 @@ bundle install
     \password
     \du
 
-
-update config/database.yml:
-    host: localhost
-    username: railsadmin
-    password: railsadmin
+#update config/database.yml:
+#    host: localhost
+#    username: railsadmin
+#    password: railsadmin
 
 
 #check pg_hba.conf and add:
 # local		all	railsadmin	peer
 
-
+#create database
 rake db:create
