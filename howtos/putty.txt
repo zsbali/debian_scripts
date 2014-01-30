@@ -1,4 +1,4 @@
-install sshd on guest: apt-get install shh
+install sshd on guest: apt-get install ssh
 check virtualbbox->network->NAT:
     check port forward: 22 2222
 check host ip
