@@ -23,6 +23,7 @@ bundle install
 
 #check pg_hba.conf and add:
 # local		all	railsadmin	peer
+sudo echo "local		all	railsadmin	peer" >> /etc/postgresql/9.1/main/pg_hba.conf
 
 #create database
 rake db:create
