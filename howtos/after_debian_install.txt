@@ -3,6 +3,9 @@ AFTER DEBIAN INSTALL
 # login as root, install sudo
 apt-get install sudo -y
 
+# install bc
+aot-get install bc -y
+
 # install ssh 
 {
   apt-get install ssh -y
