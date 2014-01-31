@@ -4,7 +4,13 @@ AFTER DEBIAN INSTALL
 apt-get install sudo -y
 
 # install ssh 
-apt-get install ssh -y
+{
+  apt-get install ssh -y
+  eval `ssh-agent -s`
+  cd ~/.ssh && ssh-keygen
+  cat id_rsa.pub
+  #then add to github
+}
 
 # add valaki to sudo
 adduser valaki sudo
