@@ -1,7 +1,7 @@
 new_app=valami
 rails new $new_app --database=postgresql
+ # -> this will add gem pg to Gemfile
 cd $new_app
-echo "gem 'pg'" >> Gemfile
 bundle install
 
 #create a railsadmin user: 
