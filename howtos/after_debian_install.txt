@@ -3,6 +3,9 @@ AFTER DEBIAN INSTALL
 # login as root, install sudo
 apt-get install sudo -y
 
+# install ssh 
+apt-get install ssh -y
+
 # add valaki to sudo
 adduser valaki sudo
 
