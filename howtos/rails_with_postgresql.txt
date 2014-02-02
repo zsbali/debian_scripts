@@ -1,8 +1,7 @@
 new_app=valami
 rails new $new_app --database=postgresql
  # -> this will add gem pg to Gemfile
-cd $new_app
-bundle install
+cd $new_app && bundle install
 
 #create a railsadmin user: 
     sudo -u postgres createuser --createdb --pwprompt railsadmin
@@ -20,10 +19,8 @@ bundle install
 #    username: railsadmin
 #    password: railsadmin
 {
- cd $new_app
- mv ./config/database.yml ./config/database.orig
- gawk -f ~/debian_scripts/config_database_yml.gawk ./config/database.orig > ./config/database.yml
- cd ..
+ cd $new_app && mv ./config/database.yml ./config/database.orig
+ gawk -f ~/debian_scripts/config_database_yml.gawk ./config/database.orig > ./config/database.yml && cd ..
 }
 
 
