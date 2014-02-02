@@ -24,5 +24,7 @@ sudo apt-get install git -y
 # clone debian_scripts
 sudo git clone https://github.com/zsbali/debian_scripts.git
 
+# clone ec2-api-tools
+sudo git clone https://github.com/traviscross/ec2-api-tools.git
 
 
