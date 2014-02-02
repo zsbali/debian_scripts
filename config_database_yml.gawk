@@ -1,9 +1,7 @@
 # usage:
 # gawk -f "~/debian_scripts/config_database_yml.gawk" path/to/railsapp/config/database.orig
 
-BEGIN {
-    $stop = "false"
-}
+BEGIN {}
 {
     if ($_ ~ /  database:/ )
     {
@@ -21,12 +19,10 @@ BEGIN {
         print "  password: railsadmin";
         $stop = "true";
     }
-    else if ( $stop == "false" )
+    else
     {
         print $_;
     }
-    
-    $stop = "false"
 }
 
 END {}
