@@ -1,31 +1,35 @@
+
 # usage:
 # gawk -f "~/debian_scripts/config_database_yml.gawk" path/to/railsapp/config/database.orig
 
-/database:/
-  {
-    print $_;print "  host: localhost";
-    stop=1; 
-  }
-  
-/username:/
-  {
-    print "  username: railsadmin";
-    stop=1;
-  }
-
-/password:/
-  {
-    print "  password: railsadmin";
-    stop=1;
-  }
-
-/.*/
-  { if (!stop)
+BEGIN {
+    $stop = "false"
+}
+{
+    if ($_ ~ /  database:/ )
     {
-      print $_
+<------>print $_;
+<------>print "  host: localhost";
+<------>$stop = "true";.
+    }
+    else if ( $_ ~ /  username:/ )
+    {
+        print "  username: railsadmin";
+<------>$stop = "true";
+    }
+    else if ( $_ ~ /  password:/ )
+    {
+<------>print "  password: railsadmin";
+<------>$stop = "true";
     }
     else
-    {
-      stop=0;
+    {.
+<------>( $stop == "false" )
+<------>{
+    <-->    print $_;
+<------>}
+<------>$stop = "false"
     }
-  }
+}
+
+END {}
