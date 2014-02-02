@@ -9,7 +9,7 @@ BEGIN {
     {
         print $_;
         print "  host: localhost";
-        $stop = "true";.
+        $stop = "true";
     }
     else if ( $_ ~ /  username:/ )
     {
