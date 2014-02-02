@@ -22,7 +22,7 @@ bundle install
 {
  cd $new_app
  mv ./config/database.yml ./config/database.orig
- gawk '/database:/{print $_;print "  host: localhost";stop=1; }/username:/{print "  username: railsadmin";stop=1;}/password:/{print "  password: railsadmin";stop=1;}/.*/{ if (!stop) {print $_}{stop=0}}' ./config/database.orig > ./config/database.yml
+ gawk -f "~/debian_scripts/config_database_yml.gawk" ./config/database.orig > ./config/database.yml
  cd ..
 }
 
