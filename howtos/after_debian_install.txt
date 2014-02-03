@@ -1,8 +1,7 @@
 AFTER DEBIAN INSTALL
 
 # login as root and update debian
-apt-get update -y
-apt-get upgrade
+apt-get update -y && apt-get upgrade
 
 # install some essential package: sudo, bc, ssh, git, mc
 apt-get install sudo bc ssh git mc -y
@@ -10,13 +9,14 @@ apt-get install sudo bc ssh git mc -y
 # add somebody to sudo
 adduser somebody sudo
 
-logout and login as somebody
+# login as somebody
+su somebody --login
 
 # generate a public key (for e.g. github)
 {
   eval `ssh-agent -s`
-  cd ~/.ssh && ssh-keygen
-  cat id_rsa.pub
+  cd ~/.ssh && ssh-keygen -f key01
+  cat key01.pub
   #then add to github (on the website)
 }
 
