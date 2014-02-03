@@ -1,0 +1,5 @@
+BEFORE DEBIAN INSTALL
+
+remember to:
+  - install ssh (set checkbox: SSH server)
+  - decide to name a regular user
