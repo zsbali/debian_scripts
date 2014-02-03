@@ -15,10 +15,13 @@ su somebody --login
 # generate a public key (for e.g. github)
 {
   eval `ssh-agent -s`
-  cd ~/.ssh && ssh-keygen -f key01
-  cat key01.pub
+  ssh-keygen -f ./.ssh/key01
+  cat ~/.ssh/key01.pub
   #then add to github (on the website)
 }
+
+#prepare for cloning
+cd ~
 
 # clone debian_scripts
 sudo git clone https://github.com/zsbali/debian_scripts.git
