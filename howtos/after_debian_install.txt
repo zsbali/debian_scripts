@@ -1,12 +1,16 @@
 AFTER DEBIAN INSTALL
 
-# login as root, install some essential package: sudo, bc, ssh, git
-apt-get install sudo bc ssh git -y
+# login as root and update debian
+apt-get update -y
+apt-get upgrade
 
-# add valaki to sudo
-adduser valaki sudo
+# install some essential package: sudo, bc, ssh, git, mc
+apt-get install sudo bc ssh git mc -y
 
-logout and login as valaki
+# add somebody to sudo
+adduser somebody sudo
+
+logout and login as somebody
 
 # generate a public key (for e.g. github)
 {
