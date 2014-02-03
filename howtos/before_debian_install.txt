@@ -1,6 +1,6 @@
 BEFORE DEBIAN INSTALL
 
 remember to:
-  - install ssh (set checkbox: SSH server)
-  - decide to name a regular user
   - screen capture disk partitions
+  - decide to name a regular user
+  - install ssh (set checkbox: SSH server)
