@@ -6,6 +6,9 @@ apt-get update -y && apt-get upgrade
 # install some essential package: sudo, bc, ssh, git, mc
 apt-get install sudo bc ssh git mc -y
 
+# create somebody
+adduser somebody
+
 # add somebody to sudo
 adduser somebody sudo
 
