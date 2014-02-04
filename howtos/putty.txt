@@ -4,3 +4,15 @@ check virtualbbox->network->NAT:
 check host ip
 set putty ip to host ip
 set putty port to 22
+
+# set remote charset to UTF-8
+Window -> Translation -> Remote charset: UTF-8
+
+# enable X11 forwarding
+Connection -> X11 -> Enable X11 forwarding
+
+# colorize trminal
+Connection -> Data -> Terminal details -> Terminal-type string: putty-256color
+
+# for EC2, add PUTTY user key file:
+Connection -> Auth -> Private key file for authentication: /path/to/file.pem.ppk
