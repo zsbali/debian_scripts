@@ -6,14 +6,14 @@ apt-get update -y && apt-get upgrade
 # install some essential package: sudo, bc, ssh, git, mc
 apt-get install sudo bc ssh git mc -y
 
-# create somebody
-adduser somebody
+# create admin
+adduser admin
 
-# add somebody to sudo
-adduser somebody sudo
+# add admin to sudo
+adduser admin sudo
 
-# login as somebody
-su somebody --login
+# login as admin
+su admin --login
 
 # generate a public key (for e.g. github)
 {
