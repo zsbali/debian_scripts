@@ -3,8 +3,8 @@ AFTER DEBIAN INSTALL
 # login as root and update debian
 apt-get update -y && apt-get upgrade
 
-# install some essential package: sudo, bc, ssh, git, mc
-apt-get install sudo bc ssh git mc -y
+# install some essential package: sudo, bc, ssh, git, mc, curl
+apt-get install sudo bc ssh git mc curl -y
 
 # create admin
 adduser admin
