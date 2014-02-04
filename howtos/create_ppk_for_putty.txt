@@ -1,0 +1,10 @@
+# download and start puttygen
+
+# import pem file
+File -> Load private key
+
+# add a passphrase
+
+# Save private key
+
+
