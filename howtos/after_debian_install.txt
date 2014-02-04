@@ -15,13 +15,6 @@ adduser admin sudo
 # login as admin
 su admin --login
 
-# generate a public key (for e.g. github)
-{
-  eval `ssh-agent -s`
-  ssh-keygen -f ~/.ssh/key01 && cat ~/.ssh/key01.pub
-  #then add to github (on the website)
-}
-
 #prepare for cloning
 cd ~
 
