@@ -11,5 +11,3 @@ http://www.vimninjas.com/2012/08/26/10-vim-color-schemes-you-need-to-own/
 
 4th: add a line to .vimrc to load the preferred scheme on start:
 colorscheme grb256
-
-proba
