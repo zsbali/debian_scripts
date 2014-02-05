@@ -1,6 +1,0 @@
-BEFORE DEBIAN INSTALL
-
-remember to:
-  - choose graphical install
-  - screen capture disk partitions
-  - install ssh (set checkbox: SSH server)

@@ -1,4 +1,0 @@
-cd ~
-eval `ssh-agent -s`
-ssh-keygen -f ~/.ssh/key01 && cat ~/.ssh/key01.pub
-#then add the string to github (on the website)
