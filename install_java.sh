@@ -10,7 +10,7 @@ fi
 if [ $platf = 32 ]; then
     if [ ! -f /tmp/jdk-7u51-linux-i586.tar.gz ]; then
         #wget --no-cookies --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com" "http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-i586.tar.gz" -O /tmp/jdk-7u51-linux-i586.tar.gz --no-check-certificate || exit 0
-        wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x32.tar.gz -O /tmp/jdk-7u51-linux-i586.tar.gz --no-check-certificate || exit 0
+        wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-i586.tar.gz -O /tmp/jdk-7u51-linux-i586.tar.gz --no-check-certificate || exit 0
     fi
 
     if [ ! -d /opt/java-oracle ]; then
