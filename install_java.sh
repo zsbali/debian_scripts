@@ -27,7 +27,8 @@ else
     if [ ! -d /opt/java-oracle ]; then
 	sudo mkdir /opt/java-oracle
     fi
-    sudo tar -zxf /tmp/jdk-7-linux-x64.tar.gz -C /opt/java-oracle || exit 0
+    
+    sudo tar -zxf /tmp/jdk-*-linux-i586.tar.gz -C /opt/java-oracle || exit 0
 fi
 
 JHome=/opt/java-oracle/jdk1.7.0_51
