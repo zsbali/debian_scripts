@@ -18,7 +18,7 @@ else
 	LINK=$LINK_64
 fi
 
-if [ ! -f /tmp/jdk-*-linux-i586.tar.gz ]; then
+if [ ! -f $SAVED_FILE ]; then
 	wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" $LINK -O $SAVED_FILE --no-check-certificate || echo "Download failed !!!" ; exit 0
 fi
 
