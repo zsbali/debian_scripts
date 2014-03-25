@@ -10,6 +10,7 @@ fi
 LINK_32="http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-i586.tar.gz"
 LINK_64="http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.tar.gz"
 SAVED_FILE="/tmp/jdk-7u51-linux-i586.tar.gz"
+JHome="/opt/java-oracle/jdk1.7.0_51"
 
 if [ $platform = 32 ]; then
 	LINK=$LINK_32
@@ -27,7 +28,6 @@ fi
     
 sudo tar -zxf $SAVED_FILE -C /opt/java-oracle || echo "unzip FAILED !!!" ; exit 0
 
-JHome=/opt/java-oracle/jdk1.7.0_51
 sudo update-alternatives --install /usr/bin/java java ${JHome%*/}/bin/java 20000 || exit 0
 sudo update-alternatives --install /usr/bin/javac javac ${JHome%*/}/bin/javac 20000 || exit 0
 sudo update-alternatives --config java || exit 0
