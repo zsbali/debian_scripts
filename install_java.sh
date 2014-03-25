@@ -28,9 +28,12 @@ fi
 sudo tar -zxf $SAVED_FILE -C /opt/java-oracle || echo "unzip FAILED !!!" ; exit 0
 
 JHome=/opt/java-oracle/jdk1.7.0_51
-sudo update-alternatives --install /usr/bin/java java ${JHome%*/}/bin/java 20000
-sudo update-alternatives --install /usr/bin/javac javac ${JHome%*/}/bin/javac 20000
-sudo update-alternatives --config java
+sudo update-alternatives --install /usr/bin/java java ${JHome%*/}/bin/java 20000 || exit 0
+sudo update-alternatives --install /usr/bin/javac javac ${JHome%*/}/bin/javac 20000 || exit 0
+sudo update-alternatives --config java || exit 0
+
+echo "SUCCESS!!"
+java -version
 
 #if [ ! -d /opt/google/chrome/plugins ]; then
 #    sudo mkdir /opt/google/chrome/plugins || exit 0
