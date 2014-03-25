@@ -19,7 +19,7 @@ else
 fi
 
 if [ ! -f $SAVED_FILE ]; then
-	wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" $LINK -O $SAVED_FILE --no-check-certificate || echo "Download failed !!!" ; exit 0
+	wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" $LINK -O $SAVED_FILE --no-check-certificate
 fi
 
 if [ ! -d /opt/java-oracle ]; then
