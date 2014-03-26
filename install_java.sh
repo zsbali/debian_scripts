@@ -29,9 +29,9 @@ fi
     
 sudo tar -zxf $SAVED_FILE -C $UNZIP_TO || echo "unzip FAILED !!!" ; exit 0
 
-sudo update-alternatives --install /usr/bin/java java ${JHome%*/}/bin/java 20000 || exit 0
-sudo update-alternatives --install /usr/bin/javac javac ${JHome%*/}/bin/javac 20000 || exit 0
-sudo update-alternatives --config java || exit 0
+sudo update-alternatives --install /usr/bin/java java ${JHome%*/}/bin/java 20000 || echo "FAILED 1" ; exit 0
+sudo update-alternatives --install /usr/bin/javac javac ${JHome%*/}/bin/javac 20000 || echo "FAILED 2" ;exit 0
+sudo update-alternatives --config java || echo "FAILED 3" ; exit 0
 
 echo "SUCCESS!!"
 java -version
