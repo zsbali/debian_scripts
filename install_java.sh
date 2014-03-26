@@ -23,7 +23,7 @@ if [ ! -f $SAVED_FILE ]; then
 	wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" $LINK -O $SAVED_FILE --no-check-certificate
 fi
 
-if [ ! -d /opt/java-oracle ]; then
+if [ ! -d $UNZIP_TO ]; then
 	sudo mkdir $UNZIP_TO || echo "mkdir $UNZIP_TO FAILED" ; exit 0
 fi
     
