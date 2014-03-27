@@ -17,8 +17,6 @@ SAVED_FILE="/tmp/jdk-8-linux-i586.tar.gz"
 JHome="/opt/java-oracle"
 
 UNZIP_TO="$JHome/src"
-echo $UNZIP_TO
-exit 1
 
 if [ $platform = 32 ]; then
 	LINK=$LINK_32
@@ -32,6 +30,8 @@ fi
 
 if [ ! -d $UNZIP_TO ]; then
 	sudo mkdir -p $UNZIP_TO || { echo "mkdir $UNZIP_TO FAILED" ; exit 1; }
+	echo "DEBUG#1"
+	exit 1
 fi
     
 sudo tar -zxf $SAVED_FILE -C $UNZIP_TO || { echo "unzip FAILED !!!" ; exit 1; }
