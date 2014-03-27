@@ -15,8 +15,9 @@ LINK_32="http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-i586.tar
 LINK_64="http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-x64.tar.gz"
 SAVED_FILE="/tmp/jdk-8-linux-i586.tar.gz"
 JHome="/opt/java-oracle"
-
-UNZIP_TO="$JHome/src"
+UNZIP_TO="$JHome"
+JAVA_PATH="$JHome/jdk1.8.0/bin/java"
+JAVAC_PATH="$JHome/jdk1.8.0/bin/javac"
 
 if [ $platform = 32 ]; then
 	LINK=$LINK_32
@@ -28,14 +29,14 @@ if [ ! -f $SAVED_FILE ]; then
 	wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" $LINK -O $SAVED_FILE --no-check-certificate
 fi
 
-if [ ! -d $UNZIP_TO ]; then
-	sudo mkdir -p $UNZIP_TO || { echo "mkdir $UNZIP_TO FAILED" ; exit 1; }
+if [ ! -d $JHome ]; then
+	sudo mkdir $JHome || { echo "mkdir $JHome FAILED" ; exit 1; }
 fi
     
 sudo tar -zxf $SAVED_FILE -C $UNZIP_TO || { echo "unzip FAILED !!!" ; exit 1; }
 
-sudo update-alternatives --install /usr/bin/java java ${JHome%*/}/bin/java 20000 || { echo "FAILED 1" ; exit 1; }
-sudo update-alternatives --install /usr/bin/javac javac ${JHome%*/}/bin/javac 20000 || { echo "FAILED 2" ; exit 1; }
+sudo update-alternatives --install /usr/bin/java java $JAVA_PATH 20000 || { echo "FAILED 1" ; exit 1; }
+sudo update-alternatives --install /usr/bin/javac javac $JAVAC_PATH 20000 || { echo "FAILED 2" ; exit 1; }
 sudo update-alternatives --config java || { echo "FAILED 3" ; exit 1; }
 
 echo "SUCCESS!!"
