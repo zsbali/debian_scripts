@@ -30,8 +30,6 @@ fi
 
 if [ ! -d $UNZIP_TO ]; then
 	sudo mkdir -p $UNZIP_TO || { echo "mkdir $UNZIP_TO FAILED" ; exit 1; }
-	echo "DEBUG#1"
-	exit 1
 fi
     
 sudo tar -zxf $SAVED_FILE -C $UNZIP_TO || { echo "unzip FAILED !!!" ; exit 1; }
