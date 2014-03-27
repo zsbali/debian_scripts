@@ -18,7 +18,7 @@ JHome="/opt/java-oracle"
 
 UNZIP_TO="$JHome/src"
 echo $UNZIP_TO
-ecxit 1
+exit 1
 
 if [ $platform = 32 ]; then
 	LINK=$LINK_32
