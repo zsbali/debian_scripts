@@ -21,7 +21,7 @@ if [ ! -f $SAVED_FILE ]; then
 	wget $LINK -O $SAVED_FILE
 fi
 
-sudo apt-get install libxss1 xdg-utils -y
 sudo dpkg -i $SAVED_FILE
+sudo apt-get install -f -y
 
 echo "SUCCESS!!"
