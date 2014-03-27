@@ -24,4 +24,5 @@ fi
 sudo dpkg -i $SAVED_FILE
 sudo apt-get install -f -y
 
-echo "SUCCESS!!"
+google-chrome --version
+
