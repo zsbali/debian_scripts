@@ -4,7 +4,7 @@ platform=$1
 
 if [[ ($platform != "32") && ($platform != "64") ]]; then
     echo "usage: ./install_chrome 32|64"
-    exit 0
+    exit 1
 fi
 
 LINK_32="https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb"
