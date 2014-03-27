@@ -37,3 +37,5 @@ print3 "nginx" 		"nginx -v 2>&1"
 print3 "gcc" 		"gcc --version | grep gcc"
 print3 "passenger" 	"passenger -v | grep version"
 print3 "java"		"java -version 2>&1 | grep version"
+print3 "google-chrome"	"google-chrome --version"
+
