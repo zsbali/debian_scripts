@@ -7,10 +7,8 @@ if [[ ($platform != "32") && ($platform != "64") ]]; then
     exit 0
 fi
 
-#LINK_32="http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-i586.tar.gz"
-#LINK_64="http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.tar.gz"
-#SAVED_FILE="/tmp/jdk-7u51-linux-i586.tar.gz"
-#JHome="/opt/java-oracle/jdk1.7.0_51"
+# check lest version an update LINK_32 an LINK_64 accordingly
+# www.oracle.com -> downloads -> Java -> Java SE -> Java Platform (JDK) 8u5
 LINK_32="http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-i586.tar.gz"
 LINK_64="http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-x64.tar.gz"
 SAVED_FILE="/tmp/jdk-8-linux-i586.tar.gz"
