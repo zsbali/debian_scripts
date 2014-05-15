@@ -38,6 +38,7 @@ sudo update-alternatives --install /usr/bin/java java $JAVA_PATH 20000 || { echo
 sudo update-alternatives --install /usr/bin/javac javac $JAVAC_PATH 20000 || { echo "FAILED 2" ; exit 1; }
 sudo update-alternatives --config java || { echo "FAILED 3" ; exit 1; }
 
+rm $SAVED_FILE
 echo "SUCCESS!!"
 java -version
 
