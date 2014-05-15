@@ -7,8 +7,12 @@ if [[ ($platform != "32") && ($platform != "64") ]]; then
     exit 0
 fi
 
-# check the latest version an update LINK_32 and LINK_64 accordingly
-# www.oracle.com -> downloads -> Java -> Java SE -> Java Platform (JDK) 8u5
+# check the latest version at 
+# 	www.oracle.com -> downloads -> Java -> Java SE -> Java Platform (JDK) 8u5
+# and 
+#	update LINK_32 and LINK_64 accordingly
+# and 
+# 	update JAVA_PATH, JAVAC_PATH accordingly
 LINK_32="http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-i586.tar.gz"
 LINK_64="http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-x64.tar.gz"
 LINK_64="http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-linux-x64.tar.gz"
