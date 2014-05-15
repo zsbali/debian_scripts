@@ -12,7 +12,7 @@ fi
 LINK_32="http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-i586.tar.gz"
 LINK_64="http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-x64.tar.gz"
 LINK_64="http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-linux-x64.tar.gz"
-SAVED_FILE="/tmp/jdk-8-linux-i586.tar.gz"
+SAVED_FILE="/tmp/jdk-inux.tar.gz"
 JHome="/opt/java-oracle"
 UNZIP_TO="$JHome"
 JAVA_PATH="$JHome/jdk1.8.0_05/bin/java"
