@@ -7,17 +7,14 @@ BEGIN {}
     {
         print $_;
         print "  host: localhost";
-        $stop = "true";
     }
     else if ( $_ ~ /  username:/ )
     {
         print "  username: railsadmin";
-        $stop = "true";
     }
     else if ( $_ ~ /  password:/ )
     {
         print "  password: railsadmin";
-        $stop = "true";
     }
     else
     {
