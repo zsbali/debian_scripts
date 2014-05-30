@@ -22,7 +22,7 @@ function print3 {
 }
 
 function webmin {
-	if [ dpkg -l webmin 2> /dev/null ]; then 
+	if [ `dpkg -l webmin 2> /dev/null` ]; then 
 	   #printf "$FIELD_2_FORMAT" $FW2 `echo "which $1" |sh`
 	   trimmed=`echo "$2" | sh | cut -c1-"$FW3"`
 	   printf "%s\n" "$trimmed"
