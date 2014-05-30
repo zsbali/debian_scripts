@@ -20,6 +20,17 @@ function print3 {
 	    echo ""
 	fi
 }
+
+function webmin {
+	if [ dpkg -l webmin 2> /dev/null ]; then 
+	   #printf "$FIELD_2_FORMAT" $FW2 `echo "which $1" |sh`
+	   trimmed=`echo "$2" | sh | cut -c1-"$FW3"`
+	   printf "%s\n" "$trimmed"
+	else
+	    echo ""
+	fi
+}
+
 print3 "sudo"		"sudo -V | grep 'Sudo version'" 
 print3 "ssh" 		"ssh -V 2>&1 | grep 'SSH'"
 print3 "curl" 		"curl --version | grep curl"
@@ -39,4 +50,4 @@ print3 "passenger" 	"passenger -v | grep version"
 print3 "java"		"java -version 2>&1 | grep version"
 print3 "google-chrome"	"google-chrome --version"
 print3 "couchdb"	"couchdb -V | egrep '^couchdb'"
-print3 "webmin"		"dpkg -s webmin | egrep '^Version'"
+webmin "webmin"		"dpkg -s webmin | egrep '^Version'"
