@@ -1,4 +1,4 @@
-linux_scripts
+debian_scripts
 =============
 
-useful linux scripts
+useful debian scripts
