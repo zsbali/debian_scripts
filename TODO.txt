@@ -1,3 +1,5 @@
 install postgres 9.3
 
+install sldap
+
 install java
