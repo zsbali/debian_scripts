@@ -3,11 +3,12 @@ export HISTFILESIZE=100000000
 export HISTIGNORE='&:ls:[bf]g:exit:[ ]*'
 export HISTCONTROL=ignoredumps
 
-alias "ci=~/debian_scripts/cinstall.sh"
-alias "gs=git status"
-alias "ga=git add"
-alias "gpom=git push origin master"
-alias "gc=git commit"
+alias ci="~/debian_scripts/cinstall.sh"
+alias gs="git status"
+alias ga="git add"
+alias gpom="git push origin master"
+alias gpozsb="git push origin zsb"
+alias gc="git commit"
 
 bind -r '\C-s'
 stty -ixon
