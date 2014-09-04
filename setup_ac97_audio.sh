@@ -2,4 +2,9 @@
 
 sudo apt-get install alsa-tools -y
 sudo alsactl-init
-sudo alsamixer
+
+
+echo ""  
+echo "Don't forget to run 'sudo alsamixer!'"
+echo ""
+#sudo alsamixer
