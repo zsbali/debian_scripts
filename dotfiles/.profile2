@@ -9,6 +9,7 @@ alias ga="git add"
 alias gpom="git push origin master"
 alias gpozsb="git push origin zsb"
 alias gc="git commit"
+alias gd="git diff"
 
 bind -r '\C-s'
 stty -ixon
