@@ -32,6 +32,17 @@ function webmin {
 	fi
 }
 
+function slapd {
+    printf "$FIELD_1_FORMAT" $FW1 $1	
+	if dpkg -l slapd 1> /dev/null 2> /dev/null; then
+	   #printf "$FIELD_2_FORMAT" $FW2 `echo "which $1" |sh`
+	   trimmed=`echo "$2" | sh | cut -c1-"$FW3"`
+	   printf "%s\n" "$trimmed"
+	else
+	    echo ""
+	fi
+}
+
 print3 "sudo"		"sudo -V | grep 'Sudo version'" 
 print3 "ssh" 		"ssh -V 2>&1 | grep 'SSH'"
 print3 "curl" 		"curl --version | grep curl"
@@ -53,3 +64,5 @@ print3 "google-chrome"	"google-chrome --version"
 print3 "firefox"	"firefox -v"
 print3 "couchdb"	"couchdb -V | egrep '^couchdb'"
 webmin "webmin"		"dpkg -s webmin | egrep '^Version'"
+webmin "slapd"		"dpkg -s slapd | egrep '^Version'"
+
