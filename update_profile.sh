@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if grep "source ~/debian_scripts/dotfiles/.profile2" ~/.profile;
+if grep "source ~/debian_scripts/dotfiles/.bashrc2" ~/.bashrc;
 then echo "";
-else echo "source ~/debian_scripts/dotfiles/.profile2" >> ~/.profile ;
+else echo "source ~/debian_scripts/dotfiles/.bashrc2" >> ~/.bashrc ;
 fi
