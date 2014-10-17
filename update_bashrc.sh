@@ -1,7 +1,6 @@
-cat << EOF >> ~/.bashrc
-export HISTSIZE=100000000
-export HISTFILESIZE=100000000
-export HISTIGNORE='&:ls:[bf]g:exit:[ ]*'
-export HISTCONTROL=ignoredumps
-EOF
+#!/bin/bash
 
+if grep "source ~/debian_scripts/dotfiles/.bashrc2" ~/.bashrc;
+then echo "";
+else echo "source ~/debian_scripts/dotfiles/.bashrc2" >> ~/.bashrc ;
+fi
